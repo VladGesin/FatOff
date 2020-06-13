@@ -94,8 +94,7 @@ public class MainWin {
 	private JTextPane gnrlSummTPane;
 
 	public MainWin(Nutritionist nut, Customer cust) {
-		
-		
+
 		Session sess = new Session(cust.getSessions().size()+1);
 		
 		// Initialize the UI manager to configure Panel and Otion Panes UI
@@ -352,9 +351,9 @@ public class MainWin {
 				}
 				calcBtn.setEnabled(true);
 				emailSummBtn.setEnabled(false);
+        
 			}
 		});
-		clearBtn.setFont(new Font("Century Gothic", Font.PLAIN, 10));
 
 		emailSummBtn.setEnabled(false);
 		emailSummBtn.addActionListener(new ActionListener() {
