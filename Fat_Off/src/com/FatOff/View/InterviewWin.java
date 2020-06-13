@@ -314,32 +314,6 @@ public class InterviewWin {
 			}
 		});
 
-		ButtonGroup radios = new ButtonGroup();
-
-		JRadioButton sedentaryRadio = new JRadioButton("Sedentary");
-		sedentaryRadio.setBackground(new Color(36, 47, 65));
-		sedentaryRadio.setForeground(new Color(255, 255, 255));
-		radios.add(sedentaryRadio);
-
-		JRadioButton lowActiveRadio = new JRadioButton("Low Active");
-		lowActiveRadio.setBackground(new Color(36, 47, 65));
-		lowActiveRadio.setForeground(new Color(255, 255, 255));
-		radios.add(lowActiveRadio);
-
-		JRadioButton activeRadio = new JRadioButton("Active");
-		activeRadio.setBackground(new Color(36, 47, 65));
-		activeRadio.setForeground(new Color(255, 255, 255));
-		radios.add(activeRadio);
-
-		JRadioButton veryActiveRadio = new JRadioButton("Very Active");
-		veryActiveRadio.setBackground(new Color(36, 47, 65));
-		veryActiveRadio.setForeground(new Color(255, 255, 255));
-		radios.add(veryActiveRadio);
-
-		JLabel activityLevelLbl = new JLabel("Activity Level:");
-		activityLevelLbl.setBackground(new Color(36, 47, 65));
-		activityLevelLbl.setForeground(new Color(255, 255, 255));
-
 		JButton saveBtn = new JButton("Save");
 		saveBtn.setForeground(new Color(255, 255, 255));
 		saveBtn.setBackground(new Color(97, 212, 195));
@@ -354,7 +328,7 @@ public class InterviewWin {
 							foodNotLikeATPane.getText(), deseasMedATPane.getText(), concentrationATPane.getText(),
 							gainedLostATPane.getText(), cust, pathToCust);
 					
-					new MainWin(nut,cust,getSelectedButtonText(radios));
+					new MainWin(nut,cust);
 					interviewFrame.dispose();
 					
 				} catch (FileNotFoundException e1) {
@@ -373,31 +347,20 @@ public class InterviewWin {
 				.addGroup(gl_panel.createSequentialGroup()
 					.addGroup(gl_panel.createParallelGroup(Alignment.TRAILING)
 						.addGroup(gl_panel.createSequentialGroup()
-							.addContainerGap()
-							.addComponent(activityLevelLbl)
-							.addGap(18)
-							.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
-								.addComponent(sedentaryRadio)
-								.addComponent(activeRadio))
-							.addGap(22)
-							.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
-								.addComponent(veryActiveRadio)
-								.addComponent(lowActiveRadio))
-							.addGap(215)
 							.addComponent(cancelBtn, GroupLayout.PREFERRED_SIZE, 77, GroupLayout.PREFERRED_SIZE)
 							.addPreferredGap(ComponentPlacement.RELATED)
 							.addComponent(saveBtn, GroupLayout.PREFERRED_SIZE, 77, GroupLayout.PREFERRED_SIZE)
 							.addPreferredGap(ComponentPlacement.RELATED))
 						.addGroup(gl_panel.createSequentialGroup()
 							.addContainerGap()
-							.addComponent(interviewScrollPane, GroupLayout.DEFAULT_SIZE, 679, Short.MAX_VALUE))
+							.addComponent(interviewScrollPane, GroupLayout.DEFAULT_SIZE, 698, Short.MAX_VALUE))
 						.addGroup(gl_panel.createSequentialGroup()
 							.addGap(14)
 							.addComponent(logoLbl)
 							.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
 								.addGroup(gl_panel.createSequentialGroup()
 									.addGap(18)
-									.addComponent(txtpnWelcomeToThe, GroupLayout.DEFAULT_SIZE, 536, Short.MAX_VALUE))
+									.addComponent(txtpnWelcomeToThe, GroupLayout.DEFAULT_SIZE, 545, Short.MAX_VALUE))
 								.addGroup(gl_panel.createSequentialGroup()
 									.addGap(74)
 									.addComponent(introInterviewLbl, GroupLayout.PREFERRED_SIZE, 298, GroupLayout.PREFERRED_SIZE)))))
@@ -414,25 +377,11 @@ public class InterviewWin {
 							.addComponent(txtpnWelcomeToThe, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 						.addComponent(logoLbl, GroupLayout.PREFERRED_SIZE, 190, GroupLayout.PREFERRED_SIZE))
 					.addPreferredGap(ComponentPlacement.UNRELATED)
-					.addComponent(interviewScrollPane, GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
+					.addComponent(interviewScrollPane, GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
+					.addGap(18)
 					.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
-						.addGroup(gl_panel.createSequentialGroup()
-							.addGap(18)
-							.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
-								.addComponent(cancelBtn, GroupLayout.PREFERRED_SIZE, 30, GroupLayout.PREFERRED_SIZE)
-								.addComponent(saveBtn, GroupLayout.PREFERRED_SIZE, 30, GroupLayout.PREFERRED_SIZE)))
-						.addGroup(gl_panel.createSequentialGroup()
-							.addPreferredGap(ComponentPlacement.RELATED)
-							.addGroup(gl_panel.createParallelGroup(Alignment.BASELINE)
-								.addComponent(lowActiveRadio)
-								.addComponent(sedentaryRadio))
-							.addPreferredGap(ComponentPlacement.RELATED)
-							.addGroup(gl_panel.createParallelGroup(Alignment.BASELINE)
-								.addComponent(veryActiveRadio)
-								.addComponent(activeRadio)))
-						.addGroup(gl_panel.createSequentialGroup()
-							.addGap(26)
-							.addComponent(activityLevelLbl)))
+						.addComponent(cancelBtn, GroupLayout.PREFERRED_SIZE, 30, GroupLayout.PREFERRED_SIZE)
+						.addComponent(saveBtn, GroupLayout.PREFERRED_SIZE, 30, GroupLayout.PREFERRED_SIZE))
 					.addGap(10))
 		);
 		panel.setLayout(gl_panel);

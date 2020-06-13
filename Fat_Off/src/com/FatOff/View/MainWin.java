@@ -93,7 +93,7 @@ public class MainWin {
 	// Text Panes
 	private JTextPane gnrlSummTPane;
 
-	public MainWin(Nutritionist nut, Customer cust, String activity) {
+	public MainWin(Nutritionist nut, Customer cust) {
 		
 		
 		Session sess = new Session(cust.getSessions().size()+1);
