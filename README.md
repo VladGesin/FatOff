@@ -69,4 +69,5 @@ Contact me via my linkedin : https://www.linkedin.com/in/vladgesin/
     <img width="50%" src="https://i.ibb.co/Fxvb4rD/2020-11-30-16-33-58.png"> 
   </p>
     
+ 
 
